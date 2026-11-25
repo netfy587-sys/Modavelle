@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modavelle | Mindful Style, Fabric Knowledge and Wardrobe Thinking</title>
+<meta name="description" content="Modavelle is an independent reading space about mindful style: how fabrics behave, how to build a wardrobe that lasts, and how to dress with more intention.">
+
+<!-- Google AdSense / Google Ads script: paste your site code here (inside head) -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#232B45;
+  --ink-soft:#4A5270;
+  --mist:#EEEAF5;
+  --paper:#FBFAFD;
+  --sage:#7E9A8C;
+  --sage-dark:#4F6A5C;
+  --mulberry:#9C3D5B;
+  --line:#DCD6E6;
+  --radius:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;font-size:17px;width:100%;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--mulberry)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--mulberry);outline-offset:3px}
+h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:500;line-height:1.15;color:var(--ink)}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 28px}
+.narrow{max-width:760px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(251,250,253,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand span{font-family:'Bodoni Moda',serif;font-size:1.55rem;font-weight:700;letter-spacing:.01em}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{text-decoration:none;color:var(--ink-soft);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--mulberry)}
+
+/* hero */
+.hero{padding:70px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.4rem);margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--mulberry)}
+.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:540px;margin-bottom:34px}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:15px 30px;border-radius:var(--radius);font-weight:600;transition:background .2s}
+.btn:hover{background:var(--mulberry)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);margin-left:12px}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hero-imgs figure{overflow:hidden;border-radius:var(--radius);background:var(--mist)}
+.hero-imgs figure:first-child{grid-row:span 2}
+.hero-imgs img{width:100%;height:100%;object-fit:cover;min-height:230px}
+
+/* sections */
+section{padding:76px 0}
+.alt{background:var(--mist)}
+.sec-head{max-width:720px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin-bottom:16px}
+.sec-head p{color:var(--ink-soft)}
+
+.intro p{margin-bottom:22px;font-size:1.08rem}
+.intro p:first-child::first-letter{font-family:'Bodoni Moda',serif;font-size:3.6rem;float:left;line-height:.9;padding:6px 12px 0 0;color:var(--mulberry)}
+
+/* split articles */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.split.flip .split-img{order:2}
+.split-img{overflow:hidden;border-radius:var(--radius);background:var(--mist)}
+.split-img img{width:100%;height:100%;min-height:420px;object-fit:cover}
+.split h2{font-size:clamp(1.9rem,3.2vw,2.6rem);margin-bottom:20px}
+.split p{margin-bottom:18px;color:var(--ink-soft)}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink)}
+.pillar{padding:32px 30px 10px 0}
+.pillar+.pillar{padding-left:30px;border-left:1px solid var(--line)}
+.pillar h3{font-size:1.5rem;margin-bottom:12px}
+.pillar p{color:var(--ink-soft);font-size:.99rem}
+
+/* fabric table */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line);font-size:.97rem;vertical-align:top}
+th{background:var(--ink);color:#fff;font-weight:600}
+tr:last-child td{border-bottom:none}
+td:first-child{font-weight:600;color:var(--ink)}
+
+/* checklist */
+.capsule{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.capsule ul{list-style:none}
+.capsule li{padding:15px 0 15px 34px;border-bottom:1px solid var(--line);position:relative;color:var(--ink-soft)}
+.capsule li::before{content:"";position:absolute;left:4px;top:23px;width:13px;height:7px;border-left:2.5px solid var(--sage-dark);border-bottom:2.5px solid var(--sage-dark);transform:rotate(-45deg)}
+.capsule li strong{color:var(--ink)}
+.quote{background:var(--ink);color:#fff;border-radius:var(--radius);padding:44px 40px}
+.quote p{font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.6rem;line-height:1.4;margin-bottom:16px}
+.quote span{color:#C9C3DC;font-size:.95rem}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery figure{overflow:hidden;border-radius:var(--radius);background:var(--mist)}
+.gallery img{width:100%;height:320px;object-fit:cover}
+.gallery figcaption{padding:14px 4px 0;font-size:.93rem;color:var(--ink-soft)}
+.gallery figure{background:none}
+.gallery .ph{overflow:hidden;border-radius:var(--radius);background:var(--mist)}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--mulberry)}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:14px;color:var(--ink-soft)}
+
+/* ad slots (no label, no styling that attracts clicks) */
+.ad-slot{width:100%;max-width:1180px;margin:0 auto;padding:30px 28px;min-height:120px;text-align:center}
+
+/* disclaimer */
+.disclaimer{background:var(--mist);border-left:4px solid var(--sage-dark);border-radius:var(--radius);padding:30px 34px}
+.disclaimer h3{font-size:1.4rem;margin-bottom:12px}
+.disclaimer p{color:var(--ink-soft);font-size:.97rem;margin-bottom:10px}
+
+/* footer */
+footer{background:var(--ink);color:#C9C3DC;padding:56px 0 34px;margin-top:40px}
+.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:34px}
+.foot .brand,.foot .brand span{color:#fff}
+.foot p{max-width:420px;font-size:.95rem;margin-top:14px}
+.foot ul{list-style:none}
+.foot li{margin-bottom:10px}
+.foot a{color:#fff;text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.copy{border-top:1px solid #3A4262;padding-top:22px;font-size:.88rem}
+
+@media(max-width:900px){
+  nav{display:none}
+  .hero-grid,.split,.capsule{grid-template-columns:1fr;gap:36px}
+  .split.flip .split-img{order:0}
+  .pillars{grid-template-columns:1fr}
+  .pillar+.pillar{padding-left:0;border-left:none;border-top:1px solid var(--line);margin-top:20px}
+  .gallery{grid-template-columns:1fr}
+  .split-img img{min-height:300px}
+  .btn.ghost{margin:14px 0 0}
+  section{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Modavelle home">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#232B45"/><path d="M9 29V11l11 12 11-12v18" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="30" r="2" fill="#C9708E"/></svg>
+      <span>Modavelle</span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#fabrics">Fabrics</a></li>
+        <li><a href="#capsule">Capsule wardrobe</a></li>
+        <li><a href="#care">Garment care</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Dress with <em>intention</em>, not impulse.</h1>
+      <p class="lead">Modavelle is an independent reading space about mindful style. We write about how fabrics behave, how clothing is made, and how to build a wardrobe you will still enjoy years from now.</p>
+      <a class="btn" href="#about">Start reading</a>
+      <a class="btn ghost" href="#fabrics">Explore fabrics</a>
+    </div>
+    <div class="hero-imgs">
+      <figure><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" alt="Person wearing a layered neutral outfit" loading="eager"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=80" alt="Garments on a clothing rail" loading="eager"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80" alt="Folded clothes stacked neatly" loading="eager"></figure>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro" id="about">
+  <div class="wrap narrow">
+    <div class="sec-head"><h2>Why Modavelle exists</h2></div>
+    <p>Most of us own more clothing than we wear. Open any wardrobe and you will usually find a handful of pieces that get worn every week, and a long tail of items that stay on the hanger. The gap between what we buy and what we actually use is where a lot of frustration, clutter and waste begins.</p>
+    <p>Modavelle was created to close that gap through understanding. Not through rules about what is fashionable, and not through pressure to follow a trend, but through simple knowledge: what a fabric is made of, why a seam holds or fails, how a colour behaves next to another colour, and how a little care can double the life of a garment.</p>
+    <p>Everything you read here is written in plain language for everyday people. You do not need a big budget, a stylist or a large closet. You need a clear idea of how you live, a basic sense of how clothing works, and the patience to choose well. That is what the following pages aim to give you.</p>
+  </div>
+</section>
+
+<div class="ad-slot">
+  <!-- Google ad unit 1: paste your ad code here -->
+  <!--
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
+</div>
+
+<!-- PILLARS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Three ideas behind mindful style</h2>
+      <p>Good dressing is less about quantity and more about a few habits repeated calmly over time.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Know your routine</h3>
+        <p>Before thinking about colour or cut, list how your week actually looks: work, study, errands, family time, travel. Clothing that fits your real routine gets worn. Clothing bought for an imagined life rarely does.</p>
+      </div>
+      <div class="pillar">
+        <h3>Understand the material</h3>
+        <p>Cotton, linen, wool, viscose and polyester all feel different, breathe differently and age differently. When you understand the material, you can predict comfort, wrinkling, warmth and durability before you even try something on.</p>
+      </div>
+      <div class="pillar">
+        <h3>Look after what you own</h3>
+        <p>Washing temperature, drying method and storage shape a garment's lifespan more than its price tag. Simple habits such as turning knitwear inside out or airing a jacket can keep clothes looking fresh for years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE 1 -->
+<section>
+  <div class="wrap split">
+    <div class="split-img"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80" alt="A tidy wardrobe with clothes hung by colour" loading="lazy"></div>
+    <div>
+      <h2>Start with the wardrobe you already have</h2>
+      <p>The most useful step in building a better wardrobe is also the least glamorous one: take stock. Pull everything out, sort it into what you wear often, what you wear sometimes, and what you have not worn in a year. Be honest, but be kind. Clothes are rarely bad choices; they are often just choices that no longer match your life.</p>
+      <p>As you sort, notice patterns. Perhaps your favourite pieces all share a similar fit, or a certain colour family. Maybe the unworn items all need special care or an outfit you never get around to assembling. These patterns are valuable information. They show you what suits your body, your climate and your habits better than any style article can.</p>
+      <p>Once you can see what you have, gaps become obvious, and so does overlap. Ten similar black tops do not make a wardrobe; two well-fitted ones, a warm layer and a good pair of trousers often do more. Clarity comes first, and any future purchase becomes a calm decision instead of a hopeful guess.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FABRICS -->
+<section class="alt" id="fabrics">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>A plain-language guide to everyday fabrics</h2>
+      <p>Labels can feel like a secret code. This short guide explains what common fibres are generally like to wear and to live with. Individual garments vary depending on weave, blend and finishing.</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Fabric</th><th>How it feels</th><th>Good to know</th><th>Care in general</th></tr></thead>
+        <tbody>
+          <tr><td>Cotton</td><td>Soft, breathable, comfortable against skin</td><td>Wrinkles easily and can shrink the first time it is washed</td><td>Machine wash cool or warm; dry gently</td></tr>
+          <tr><td>Linen</td><td>Crisp, airy, cooling in heat</td><td>Creases are part of its character; softens with every wash</td><td>Wash cool, shake out, dry flat or hang</td></tr>
+          <tr><td>Wool</td><td>Warm, springy, naturally resists odour</td><td>Can feel scratchy in coarse grades; fine merino is much softer</td><td>Wash rarely, use a gentle cycle, dry flat</td></tr>
+          <tr><td>Viscose / rayon</td><td>Smooth, fluid, drapes well</td><td>Weakens when wet and may shrink if handled roughly</td><td>Hand wash or gentle cycle; avoid wringing</td></tr>
+          <tr><td>Polyester</td><td>Light, strong, holds shape</td><td>Less breathable; can hold odours in warm weather</td><td>Easy to wash; low heat when drying</td></tr>
+          <tr><td>Denim</td><td>Sturdy, structured, moulds to the wearer</td><td>Dark dye may transfer; fits relax with wear</td><td>Wash inside out, as seldom as practical</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE 2 -->
+<section>
+  <div class="wrap split flip">
+    <div class="split-img"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80" alt="Clothing on display in a quiet boutique" loading="lazy"></div>
+    <div>
+      <h2>Reading a garment before you wear it</h2>
+      <p>You can learn a great deal about a piece of clothing in under a minute. Turn it inside out and look at the seams: are they straight, even and finished neatly, or loose and frayed? Gently stretch the fabric at a seam; if the stitching gaps open, it may not last. Hold the fabric up to a window; very thin cloth tends to wear out quickly in places that rub.</p>
+      <p>Check the fit in motion, not just standing still. Raise your arms, sit down, take a few steps. A garment should allow ordinary movement without pulling, riding up or pinching. Comfort is not a luxury; it is the main reason a piece gets worn or forgotten.</p>
+      <p>Finally, read the care label before anything else. If a garment needs a routine you will not realistically follow, such as hand washing every time, it will probably spend more time in the laundry basket than on you. Choosing clothes that match your habits is a quiet form of good design.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CAPSULE -->
+<section class="alt" id="capsule">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The capsule wardrobe, explained simply</h2>
+      <p>A capsule wardrobe is a small collection of versatile pieces that work well together. It is not a minimalist challenge or a fixed number of items. It is simply a way of making getting dressed easier.</p>
+    </div>
+    <div class="capsule">
+      <ul>
+        <li><strong>Choose a base palette.</strong> Pick two or three neutral colours you like on yourself, such as navy, grey, olive or sand, so most pieces can be combined.</li>
+        <li><strong>Add one or two accent colours.</strong> These bring personality and can be swapped by season or mood without disturbing the rest.</li>
+        <li><strong>Prioritise fit over novelty.</strong> A well-fitting plain shirt looks better and gets worn more often than a loud one that never sits right.</li>
+        <li><strong>Think in layers.</strong> Light tops, a mid layer and a coat let the same pieces work across temperatures and occasions.</li>
+        <li><strong>Include a few comfortable shoes.</strong> Footwear decides how far and how happily you can walk through a day.</li>
+        <li><strong>Test every outfit idea.</strong> If a new piece does not pair with at least three things you own, pause before adding it.</li>
+      </ul>
+      <div>
+        <div class="quote">
+          <p>A wardrobe is not measured by how much it holds, but by how easily it lets you leave the house feeling like yourself.</p>
+          <span>Modavelle editorial note</span>
+        </div>
+        <p style="margin-top:26px;color:var(--ink-soft)">Capsule thinking also helps with travel, seasonal changes and moving house. When every piece has several uses, packing becomes simpler and the daily question of what to wear takes seconds instead of minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Details worth noticing</h2>
+      <p>Style often lives in small things: the weight of a fabric, the way a collar sits, the colour relationships across a rail of clothes.</p>
+    </div>
+    <div class="gallery">
+      <figure><div class="ph"><img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=700&q=80" alt="Neutral garments arranged on a rack" loading="lazy"></div><figcaption>Neutral tones make mixing and matching effortless.</figcaption></figure>
+      <figure><div class="ph"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=700&q=80" alt="Close view of clothing textures" loading="lazy"></div><figcaption>Texture adds depth even in a single colour.</figcaption></figure>
+      <figure><div class="ph"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" alt="Shopper browsing clothes in a calm setting" loading="lazy"></div><figcaption>Taking time to look closely leads to better choices.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- CARE -->
+<section class="alt" id="care">
+  <div class="wrap split">
+    <div>
+      <h2>Garment care that quietly adds years</h2>
+      <p>Most clothing wears out from handling, not from use. Heat, friction and harsh detergent are the usual culprits. A few small adjustments can make a visible difference without costing anything extra.</p>
+      <p>Wash with similar colours and weights together, and close zips and fastenings first so they do not snag other items. Use the lowest temperature that cleans the fabric properly. Many everyday clothes do not need a hot wash, and cooler water is gentler on colour and fibre alike.</p>
+      <p>When possible, dry clothes in the open air, away from strong direct sun that can fade dark shades. Fold knitwear rather than hanging it so shoulders do not stretch, and let shoes rest a day between wears. Little routines like these protect both your clothes and your time.</p>
+    </div>
+    <div class="split-img"><img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=80" alt="Neatly folded clothing ready for storage" loading="lazy"></div>
+  </div>
+</section>
+
+<div class="ad-slot">
+  <!-- Google ad unit 2: paste your ad code here -->
+  <!--
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap narrow">
+    <div class="sec-head"><h2>Common questions</h2></div>
+    <details>
+      <summary>Is Modavelle a clothing store?</summary>
+      <p>No. Modavelle is an informational site. We do not sell clothing, accessories or any other products. The pages here are written purely for reading and learning about style, fabrics and wardrobe habits.</p>
+    </details>
+    <details>
+      <summary>Do I need to follow trends to dress well?</summary>
+      <p>Not at all. Trends can be fun, but well-fitting clothes in colours you enjoy will always look considered. Many people find that a steady personal style is simpler, calmer and kinder to their budget.</p>
+    </details>
+    <details>
+      <summary>How many clothes should a wardrobe contain?</summary>
+      <p>There is no correct number. The right size is the one that covers your real routine comfortably, without leaving you with pieces you never reach for. Start by noticing what you wear, then adjust gradually.</p>
+    </details>
+    <details>
+      <summary>What is the easiest way to make clothes last longer?</summary>
+      <p>Wash less often, use cooler water, avoid high heat in the dryer and store items properly. Following the care label on each garment is the single most reliable habit.</p>
+    </details>
+    <details>
+      <summary>How do I choose colours that work for me?</summary>
+      <p>Hold a few shades near your face in natural daylight and notice which ones make you look rested and bright. Build from those, and keep the rest of the wardrobe in neutrals that blend easily.</p>
+    </details>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section style="padding-top:0">
+  <div class="wrap narrow">
+    <div class="disclaimer" role="note">
+      <h3>Disclaimer</h3>
+      <p>The content on Modavelle is provided for general informational and educational purposes only. It reflects general observations about clothing, fabrics and personal style and should not be treated as professional, medical, financial or technical advice.</p>
+      <p>Fabric behaviour, sizing, colour and care requirements differ between manufacturers and individual garments. Always follow the care label supplied with your clothing. Images are used for illustration and do not represent or endorse any specific product, brand or service.</p>
+      <p>Modavelle does not sell products or services. We make no guarantees about outcomes from applying the ideas shared here, and any decision you make is your own responsibility. Third-party advertising may appear on this site, and we are not responsible for the content of external advertisers.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top" aria-label="Modavelle home">
+          <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#FBFAFD"/><path d="M9 29V11l11 12 11-12v18" fill="none" stroke="#232B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="30" r="2" fill="#9C3D5B"/></svg>
+          <span>Modavelle</span>
+        </a>
+        <p>An independent reading space about mindful style, fabric knowledge and thoughtful wardrobe habits.</p>
+      </div>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="copy">&copy; 2026 Modavelle. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
